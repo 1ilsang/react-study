@@ -11,6 +11,26 @@ const InnerBox = ({ setIsOpen }) => {
     setIsOpen(false);
   });
 
+  // useEffect(() => {
+  //   if (!ulRef.current) return;
+
+  //   ulRef.current.addEventListener("blur", () => {
+  //     setIsOpen(false);
+  //   });
+  //   ulRef.current.addEventListener("mousedown", () => {
+  //     setIsOpen(false);
+  //   });
+
+  //   return () => {
+  //     ulRef.current.removeEventListener("blur", () => {
+  //       setIsOpen(false);
+  //     });
+  //     ulRef.current.removeEventListener("mousedown", () => {
+  //       setIsOpen(false);
+  //     });
+  //   };
+  // }, []);
+
   return (
     <ul ref={ulRef}>
       <li>Hello, World!</li>

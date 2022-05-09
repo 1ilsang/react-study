@@ -17,7 +17,7 @@ const MyReact = (() => {
     lastIndex = 0;
     const _component = Component();
     _component.render();
-    return C;
+    return _component;
   };
 
   return { useState, render };
@@ -42,7 +42,7 @@ const Component = () => {
 
 let App;
 setTimeout(() => {
-  App = MyReact.render(Component);
+  App = MyReact.render(Component); // ReactDOM.render();
   App.click();
 
   setTimeout(() => {
